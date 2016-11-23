@@ -1,0 +1,141 @@
+h1
+{
+    text-align: center;
+}
+ul
+{
+    list-style: none;
+    overflow: hidden;
+}
+li
+{
+    float: right;
+    margin: 0px 5px;
+    padding: 15px 0px;
+}
+.tituloCabecera{
+    width: 70%;
+    color: white;
+    text-shadow: 0 2px 2px #02010a;
+}
+.enlasesCabecera{
+    width: 30%;
+}
+.cabecera{
+    display: flex;
+    flex-wrap: wrap;
+    background: #5b7989;
+}
+a:link{
+    text-decoration: none;
+}
+.imagenCentral
+{
+    width: 100%;
+    background-color: #82c3a6;
+    position: relative;
+}
+.imagenSegundariaDer{
+    width: 50%;
+}
+.imagenSegundariaIzq{
+    width: 50%;
+}
+.imagenSegundariaIzq,img{
+    width:  100%
+}
+.imagenSegundariaDer,img{
+    width:  100%
+}
+.imagenesSecundarias{
+    width: 100%;
+    background-color: #d5c75f;
+    border: 1px;
+    }
+@media (max-width:900px){
+    .imagenesSecundarias{
+        width: 100%;
+    }
+    .tituloCabecera{
+    width: 100%;
+    color: white;
+    text-shadow: 0 2px 2px #02010a;
+    }
+    .enlasesCabecera{
+        width: 100%;
+        text-align: center
+    }
+    .pieDpagina{
+    display: flex;
+    flex-direction: column;
+    }
+    .bloquePie1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .bloquePie2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .bloquePie3{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .bloquePie4{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+@media (min-width:900px){
+    .imagenesSecundarias{
+        display: flex;
+    }
+    .pieDpagina{
+    display: flex;
+    flex-direction: row;
+    }
+    .bloquePie1{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+    .bloquePie2{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+    .bloquePie3{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+    .bloquePie4{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+}
+#paisajes:hover{
+    transform: rotate(10deg);
+}
+#retratos:hover{
+    box-shadow: 0 0 0 0;
+    -webkit-box-shadow: 0 0 0 0;
+    -moz-box-shadow: 0 0 0 0;
+    transform: translate(20px,-5px);
+}
+#retratos{
+    box-shadow: 2px 2px 2px 2px #82c3a6;
+    -webkit-box-shadow: 2px 2px 2px 2px #82c3a6;
+    -moz-box-shadow: 2px 2px 2px 2px #82c3a6;
+}
+.pieDpagina{
+    background: #C6d5c5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
