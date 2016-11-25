@@ -1,13 +1,15 @@
-*{
-    font-family: "Dancing Script";
+@font-face{
+    font-family: 'Dancing Script';
+    src: url('src/DancingScript-Regular.otf')
 }
 
 h1
 {
     text-align: center;
 }
+*{font-family: 'Dancing Script';}
 header{
-    animation: miAnimacion 1s;
+    animation: miAnimacion 2s;
 }
 @-webkit-keyframes miAnimacion{
     0%{
@@ -78,33 +80,9 @@ header{
     border-bottom-right-radius: 10px;
     
 }
-/*Pie de pagina efecto para agregar imagenes miniatura no es soportado en todos los navegadores*/
-a[href='http://www.instagram.com']{
-    list-style: none;
-    text-indent: 30px;
-    background: url(/imagenes/instagram.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0 .3eml;
-}
-a[href='http://www.facebook.com']{
-    list-style: none;
-    text-indent: 30px;
-    background: url(/imagenes/facebook.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0 .3eml;
-}
-a[href='http://www.twitter.com']{
-    list-style: none;
-    text-indent: 30px;
-    background: url(/imagenes/twitter.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0 .3eml;
-}
+
 /* Tamanos de las pantallas*/
-@media (max-width:900px){
+@media screen and (max-width:900px){
     .imagenesSecundarias{
         width: 100%;
     }
@@ -149,16 +127,16 @@ a[href='http://www.twitter.com']{
     }
     .imagenSegundariaDer{
         padding: 10px;
-        width: 50%;
+        width: 100%;
     }
     .imagenSegundariaIzq{
         padding: 10px;
-        width: 50%;
+        width: 100%;
     }
-    .imagenSegundariaIzq,img{
+    .imagenSegundariaIzq>img{
         width:  98%;
     }
-    .imagenSegundariaDer,img{
+    .imagenSegundariaDer>img{
         width:  98%;
     }
     .imagenesGaleria{
@@ -175,44 +153,8 @@ a[href='http://www.twitter.com']{
         flex-direction: column;
         width: 100%;
     }
-    .imagen1{
-        padding: 10px;
-        -webkit-filter: blur(10px);
-        -moz-filter: blur(10px);
-        -o-filter: blur(10px);
-        filter: blur(10px);
-    }
-    .imagen2{
-        padding: 10px;
-        filter: grayscale(40%);
-        -webkit-filter: grayscale(40%);
-        -moz-filter: grayscale(40%);
-        -o-filter: grayscale(40%);
-    }
-    .imagen3{
-        padding: 10px;
-        filter: sepia(90%);
-        -moz-filter: sepia(90%);
-        -webkit-filter: sepia(90%);
-        -o-filter: sepia(90%);
-    }
-    .imagen4{
-        padding: 10px;
-        filter: grayscale(80%);
-        -webkit-filter: grayscale(80%);
-        -moz-filter: grayscale(80%);
-        -o-filter: grayscale(80%);
-    }.imagen5{
-        padding: 10px;
-    }.imagen6{
-        padding: 10px;
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -o-filter: grayscale(100%);
-    }
 }
-@media (min-width:900px){
+@media screen and (min-width:900px){
     .imagenesSecundarias{
         display: flex;
     }
@@ -254,10 +196,10 @@ a[href='http://www.twitter.com']{
         padding: 10px;
         width: 50%;
     }
-    .imagenSegundariaIzq,img{
+    .imagenSegundariaIzq>img{
         width:  100%
     }
-    .imagenSegundariaDer,img{
+    .imagenSegundariaDer>img{
         width:  100%
     }
     .imagenesGaleria{
@@ -274,11 +216,14 @@ a[href='http://www.twitter.com']{
         flex-direction: row;
         width: 100%;
     }
+}
+/* Imagenes filtros */
     .imagen1{
         padding: 10px;
         -webkit-filter: blur(10px);
         -moz-filter: blur(10px);
         -o-filter: blur(10px);
+        -ms-filter: blur(10px);
         filter: blur(10px);
     }
     .imagen2{
@@ -287,6 +232,7 @@ a[href='http://www.twitter.com']{
         -webkit-filter: grayscale(40%);
         -moz-filter: grayscale(40%);
         -o-filter: grayscale(40%);
+        -ms-filter: grayscale(40%);
     }
     .imagen3{
         padding: 10px;
@@ -294,6 +240,7 @@ a[href='http://www.twitter.com']{
         -moz-filter: sepia(90%);
         -webkit-filter: sepia(90%);
         -o-filter: sepia(90%);
+        -ms-filter: sepia(90%);
     }
     .imagen4{
         padding: 10px;
@@ -301,6 +248,7 @@ a[href='http://www.twitter.com']{
         -webkit-filter: grayscale(80%);
         -moz-filter: grayscale(80%);
         -o-filter: grayscale(80%);
+        -ms-filter: grayscale(80%);
     }.imagen5{
         padding: 10px;
     }.imagen6{
@@ -309,5 +257,5 @@ a[href='http://www.twitter.com']{
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
     }
-}
